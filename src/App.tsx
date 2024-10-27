@@ -6,10 +6,10 @@ export default function App() {
   const decrement = useCountStore((state) => state.decrement);
 
   return (
-    <div className="bg-gray-900 h-screen flex justify-center items-center">
+    <div className="bg-gray-900 h-screen flex justify-center items-center text-white gap-5">
       <h1 className="text-2xl text-white">Count: {count}</h1>
 
-      <div>
+      <div className="flex gap-2">
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           onClick={increment}
@@ -17,7 +17,7 @@ export default function App() {
           Increment
         </button>
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
           onClick={decrement}
         >
           Decrement
