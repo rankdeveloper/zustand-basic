@@ -1,10 +1,19 @@
+import React from "react";
 import { useCountStore } from "./store";
+
+const countLog = () => {
+  let c = useCountStore.getState().count;
+  console.log("count value", c);
+};
 
 export default function App() {
   const count = useCountStore((state) => state.count);
   const increment = useCountStore((state) => state.increment);
   const decrement = useCountStore((state) => state.decrement);
 
+  React.useEffect(() => {
+    countLog();
+  }, [count]);
   return (
     <div className="bg-gray-900 h-screen flex justify-center items-center text-white gap-5">
       <h1 className="text-2xl text-white">Count: {count}</h1>
