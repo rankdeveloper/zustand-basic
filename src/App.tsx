@@ -10,6 +10,7 @@ export default function App() {
   const count = useCountStore((state) => state.count);
   const increment = useCountStore((state) => state.increment);
   const decrement = useCountStore((state) => state.decrement);
+  const doubleNum = useCountStore((state) => state.doubleNumber);
 
   React.useEffect(() => {
     countLog();
@@ -30,6 +31,13 @@ export default function App() {
           onClick={decrement}
         >
           Decrement
+        </button>
+
+        <button
+          className="bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded"
+          onClick={doubleNum}
+        >
+          Double
         </button>
       </div>
     </div>
