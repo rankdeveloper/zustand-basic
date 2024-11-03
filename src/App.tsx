@@ -11,6 +11,7 @@ export default function App() {
   const increment = useCountStore((state) => state.increment);
   const decrement = useCountStore((state) => state.decrement);
   const doubleNum = useCountStore((state) => state.doubleNumber);
+  const divideNum = useCountStore((state) => state.divide);
 
   React.useEffect(() => {
     countLog();
@@ -38,6 +39,13 @@ export default function App() {
           onClick={doubleNum}
         >
           Double
+        </button>
+
+        <button
+          className="bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded"
+          onClick={divideNum}
+        >
+          Divide
         </button>
       </div>
     </div>
